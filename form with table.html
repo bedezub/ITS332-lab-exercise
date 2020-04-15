@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            table, th, td {
+
+                padding: 5px;
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                border-collapse: collapse;
+                /* border: 1px solid black; */
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2 style="text-align: center;">HTML FORMS</h2><br>
+        <form action="taiwan.html" id="form" method="POST">
+            <table>
+                <tr>
+                    <td>Full Name:</td> 
+                    <td><input type="text" name="fullname" maxlength="50" placeholder="Hamiz Radzi" required></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="number" name="age" required></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea type="text" name="address" rows="5" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email" maxlength="100" placeholder="hamizradzi@gmail.com"/><br></td>
+                </tr>
+                <tr>
+                    <td>Birth date:</td>
+                    <td><input type="date" name="birthdate"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male"/>Male
+                        <input type="radio" id="female" name="gender" value="female"/>Female 
+                    </td>
+                </tr>
+                <tr>
+                    <td>Favourite Subject:</td>
+                    <td>
+                        <select id="subject" name="subject">
+                            <option value="cs">Computer Science</option>
+                            <option value="math">Mathematics</option>
+                            <option value="business" selected>Business</option>
+                            <option value="language">language</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="pwd" size="20"></td>
+                </tr>
+                <tr>
+                    <td>Favourite Lecturer: </td>
+                    <td><input type="text" name="favleo" value="Sir Hamiz" readonly></td>
+                </tr>
+                <tr>
+                    <td>Hobbies:</td>
+                    <td>
+                        <input type="checkbox" name="tiktok" value="tiktok">Tik Tok<br>
+                        <input type="checkbox" name="keyboardwarrior" value="keyboardwarrior">Keyboard Warrior<br>
+                        <input type="checkbox" name="skipclass" value="skipclass">Skip Class<br>
+                        <input type="checkbox" name="membawang" value="membawang">Membawang<br>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select a file:</td>
+                    <td><input type="file" name="myfile"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
