@@ -19,8 +19,6 @@
                     $coursename = $_POST["coursename"];
                     $coursedate = $_POST["coursedate"];
                     $courseid = $_POST["courseid"];
-
-                    include 'conn.php';
                     
                     $conn = OpenCon(); 
                     $sql = "INSERT INTO course (courseid, coursename, coursedate) 

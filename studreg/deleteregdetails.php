@@ -15,12 +15,12 @@
                 <?php include 'navigation.php'; ?>
             </nav>
             <article>
-                <h2 style="text-align: center">Delete Student</h2>
+            <h2 style="text-align: center">Delete Registration</h2>
                 <?php 
-                    $studid = $_GET["studid"];
+                    $regid = $_GET["regid"];
 
                     $conn = OpenCon();
-                    $sql = "DELETE FROM STUDENT WHERE studid = $studid";
+                    $sql = "DELETE FROM registration WHERE regid = $regid";
                     $result = $conn->query($sql);
 
                     if(!$result) {

@@ -30,18 +30,13 @@
                 <?php
                     
                     include 'conn.php';
-
                     $conn = OpenCon();
-
                     $page = 0;
                     if(isset($_GET["page"]) == true) {
-
                         $page = $_GET["page"];
                     } else {
-
                         $page = 0;
                     }
-
                     if($page=="" | $page == "1") {
                         $page1 = 0;
                     } else {
@@ -49,7 +44,6 @@
                     }
                     $sql = "SELECT * FROM COURSE LIMIT $page1,4";
                     $result = $conn->query($sql);
-
                     echo "<table>";
                         echo "<tr>";
                         echo "<th>Course ID</th>";
@@ -58,7 +52,6 @@
                         echo "</tr>";
                     if($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
-
                             $coursename = $row["coursename"];
                             $coursedate = $row["coursedate"];
                             $courseid = $row["courseid"];
@@ -67,8 +60,10 @@
                                 echo "<td>$courseid</td>";
                                 echo "<td>$coursename</td>";
                                 echo "<td>$coursedate</td>";
-                                echo "<td><a href=updatecoursedetails.php?courseid=$courseid>" ?> <img src="images/edit.png" style="width: 20px; height: 20px;" alt="FSKM Picutre"> <?php "</a></td>";
-                                echo "<td><a href=deletecoursedetails.php?courseid=$courseid>" ?><img src="images/delete.png" style="width: 20px; height: 20px;" alt="FSKM Picutre"></a><?php "</td>";
+                                echo "<td><a href=updatecoursedetails.php?courseid=$courseid>" ?> 
+                                <img src="images/edit.png" style="width: 20px; height: 20px;" alt="FSKM Picutre"> <?php "</a></td>";
+                                echo "<td><a href=deletecoursedetails.php?courseid=$courseid>" ?>
+                                <img src="images/delete.png" style="width: 20px; height: 20px;" alt="FSKM Picutre"></a><?php "</td>";
                             echo "<tr>";
                         }
                     } else {
@@ -87,7 +82,7 @@
                         <?php
                     }
                     CloseCon($conn);
-
+                    
                 ?>
             </article>
         </section>

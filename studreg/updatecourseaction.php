@@ -18,7 +18,6 @@
                 <?php 
                     $conn = OpenCon();
 
-
                     $coursename = $_POST["coursename"];
                     $coursedate = $_POST["coursedate"];
                     $courseid = $_POST["courseid"];

@@ -19,7 +19,7 @@
                 <form action="updatestudentaction.php" id="updateform" method="POST">
                 <?php 
                     $conn = OpenCon();
-                    
+            
                     $studentid = $_GET["studentid"];
                     $sql = "Select * from student where studid=$studentid";
                     $result = $conn->query($sql);
