@@ -21,10 +21,11 @@
                     $courseid = $_POST['courseid'];
                     $regid = rand(0,999999);
                     $regdate = $_POST['regdate'];
+                    $staffid = $login_id;
 
                     $conn = OpenCon();
-                    $sql = "INSERT INTO registration (regid, studid, courseid, regdate)
-                    VALUES ($regid, $studid, '$courseid', '$regdate')";
+                    $sql = "INSERT INTO registration (regid, studid, courseid, regdate, staffid)
+                    VALUES ($regid, $studid, '$courseid', '$regdate', '$staffid')";
 
                     if(mysqli_query($conn, $sql)) {
                         // echo "New record created successfully \n";

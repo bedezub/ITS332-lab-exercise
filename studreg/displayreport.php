@@ -39,9 +39,10 @@
                         $page1 = ($page*5)-5;
                     }
 
-                    $sql = "SELECT * FROM registration r, student s, course c 
+                    $sql = "SELECT * FROM registration r, student s, course c
                     WHERE r.studid = s.studid
                     AND r.courseid = c.courseid
+                    AND r.staffid = '$login_id'
                     ORDER BY r.regdate DESC
                     LIMIT $page, 5";
 

@@ -7,8 +7,8 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <header>
-            <h2>Welcome to FSKM Jasin</h2>
+    <header>
+            <?php include 'header.php' ?>
         </header>
         <section>
             <nav>
@@ -18,7 +18,7 @@
                 <h2>Display All Students From The Database</h2>
                 <?php
                     
-                    include 'conn.php';
+                    // include 'conn.php';
 
                     $conn = OpenCon();
 

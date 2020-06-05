@@ -18,8 +18,8 @@
         </script>
     </head>
     <body>
-        <header>
-            <h2>Welcome to FSKM Jasin</h2>
+    <header>
+            <?php include 'header.php' ?>
         </header>
         <section>
             <nav>
@@ -29,7 +29,7 @@
                 <h2>Display All Courses From The Database</h2>
                 <?php
                     
-                    include 'conn.php';
+                    // include 'conn.php';
                     $conn = OpenCon();
                     $page = 0;
                     if(isset($_GET["page"]) == true) {
